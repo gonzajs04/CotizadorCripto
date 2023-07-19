@@ -27,11 +27,11 @@ export default function Formulario({setMonedas}) {
   
   const [arrayCriptos, setArrayCriptos] = useState([]); //array con los objetos con la informacion de las criptos.
   const [error, setError] = useState(false);
-
   const [moneda, SelectMonedas] = useSelectMonedas("Elige tu moneda", monedas); //Desestructuro La funcion selectMonedas() del custom hook useSelectMonedas;
   // const [SelectCripto] = useSelectMonedas("Elige tu CriptoMoneda"); //Desestructuro La funcion selectMonedas() del custom hook useSelectMonedas y le adiciono otro nombre y otro valor incial;
   //STATE TIENE EL VALOR DE MONEDA YA SEA USD,EUR, ETC... QUE ES OTORGADO DESDE EL HOOK useSelectMonedas
   const [criptoMoneda, SelectCripto] = useSelectMonedas("Elige tu criptomoneda",arrayCriptos);
+
 
 
   useEffect(() => { //consume api para obtener todas las criptos
